@@ -14,11 +14,6 @@ body {
   src: url(https://github.com/annmartyn/perspective/blob/main/2006.ttf);
 }
 
-@font-face {
-  font-family: 'Caveat Bold';
-  src: url(https://github.com/annmartyn/perspective/blob/main/18450.ttf);
-}
-
 .header {
   margin: 0;
   z-index: 0;
