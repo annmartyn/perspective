@@ -14,6 +14,11 @@ body {
   src: url(https://github.com/annmartyn/perspective/blob/main/2006.ttf);
 }
 
+@font-face {
+  font-family: 'Caveat Bold';
+  src: url(https://github.com/annmartyn/perspective/blob/main/18450.ttf);
+}
+
 .header {
   margin: 0;
   z-index: 0;
@@ -841,3 +846,58 @@ body {
         font-size: 20px !important;
     }
 } 
+
+.icon-bottom {
+  fill: black;
+}
+
+.item-29 {
+  background: url('https://github.com/annmartyn/perspective/blob/main/img/29.jpg?raw=true');
+  background-size: cover;
+}
+
+.item-30 {
+  background: url('https://github.com/annmartyn/perspective/blob/main/img/30.jpg?raw=true');
+  background-size: cover;
+}
+
+.item-31 {
+  background: url('https://github.com/annmartyn/perspective/blob/main/img/31.jpg?raw=true');
+  background-size: cover;
+}
+
+.item-32 {
+  background: url('https://github.com/annmartyn/perspective/blob/main/img/32.jpg?raw=true');
+  background-size: cover;
+}
+
+.item-33 {
+  background: url('https://github.com/annmartyn/perspective/blob/main/img/33.jpg?raw=true');
+  background-size: cover;
+}
+
+.item-34 {
+  background: url('https://github.com/annmartyn/perspective/blob/main/img/34.jpg?raw=true');
+  background-size: cover;
+}
+
+.item-28 {
+  z-index: 2;
+  opacity: 1;
+  background: url('https://github.com/annmartyn/perspective/blob/main/img/28.jpg?raw=true');
+  background-size: cover;
+}
+
+*:target ~ .item-28 {
+    opacity: 0;
+  }
+
+#item-28:target ~ .item-28 {
+    opacity: 1;
+  }
+
+
+#item-29:target ~ .item-29, #item-30:target ~ .item-30, #item-31:target ~ .item-31, #item-32:target ~ .item-32, #item-33:target ~ .item-33, #item-34:target ~ .item-34 {
+    z-index: 3;
+    opacity: 1;
+  }
