@@ -1,13 +1,12 @@
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
-    <title>Версия для слабовидящих</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> <!-- Уже пробовала убирать эту строчку -->
-    <!-- <script src="js_change_style.js"></script> -->
+    <title>Школа "Перспектива"</title>
+    <link rel="stylesheet" type="text/css" href="./static/change_style.css">
+    <script src="jquery.min.js"></script>
+    <script defer src="js_change_style.js"></script>
     <style>
         html {
             overflow-x: hidden;
@@ -85,7 +84,7 @@
 
 <body class="active_font" class="active_bg_color">
     <header>
-        <div class="header__">
+        <div class="header">
             <div class="change_color">
                 <div class="change_color_text">Выберите цвет__ </div>
                 <span id="change_black_white" class="black_white active">А</span>
@@ -99,7 +98,7 @@
                 <span id="button_three" class="font_36">А</span>
             </div>
             <div>
-                <a class="go_back" href="/">Обычная версия сайта</a>
+                <a class="go_back" href="../index.html">Обычная версия сайта</a>
             </div>
         </div>
     </header>
