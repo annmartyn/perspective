@@ -1,5 +1,17 @@
-body { 
+body {
   margin: 0;
+}
+
+@media (max-width: 960px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 961px) {
+  html {
+    font-size: 24px;
+  }
 }
 
 .visually-hidden {
@@ -10,13 +22,8 @@ body {
 }
 
 @font-face {
-  font-family: "Comic Sans MS"; 
+  font-family: "Comic Sans MS";
   src: url(https://github.com/annmartyn/perspective/blob/main/2006.ttf);
-}
-
-@font-face {
-  font-family: 'Caveat Bold';
-  src: url(https://github.com/annmartyn/perspective/blob/main/18450.ttf);
 }
 
 .header {
@@ -33,9 +40,9 @@ body {
   content: '';
   z-index: -1;
   position: absolute;
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
+  top: 0;
+  left: 0;
+  bottom: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
 }
@@ -44,6 +51,7 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   font-family: 'Verdana';
   color: white;
@@ -56,8 +64,8 @@ body {
 }
 
 .eye__icon {
-  height: 50px;
-  width: 70px;
+  height: 4rem;
+  width: 5rem;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
@@ -66,14 +74,21 @@ body {
 
 .header__center {
   padding-right: 22%;
-  font-size: 32px;
+  font-size: 1.5rem;
 }
 
 .header__middle {
   display: flex;
+  font-family: "Comic Sans MS";
   flex-direction: column;
-  margin-top: 110px;
-  margin-bottom: 130px;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+}
+
+@media (max-width: 960px) {
+  .header__middle {
+    margin-bottom: 12rem;
+  }
 }
 
 .header__title {
@@ -85,16 +100,25 @@ body {
   height: 150px;
 }
 
+@media (max-width: 960px) {
+  .header__title {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .header__title-school {
   display: flex;
   width: 40%;
   padding-right: 10%;
+  margin: 0 auto;
   justify-content: space-between;
 }
 
 .header__title-perspective {
   display: flex;
   width: 90%;
+  margin: 0 auto;
   justify-content: space-between;
 }
 
@@ -102,31 +126,18 @@ body {
   margin: 0 auto;
   font-family: 'Verdana';
   color: white;
-}
-
-@media (min-width: 961px) {
-  .letter {
-    font-size: 64px;
-  }
-  
-  .header__menu, .header__motto {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 960px) {
-  .letter {
-    font-size: 24px;
-  }
-  
-  .header__menu, .header__motto {
-    font-size: 15px;
-  }
+  text-align: center;
 }
 
 .letter {
+  font-size: 2.5rem;
+  line-height: 3rem;
   font-family: 'Comic Sans MS';
   font-weight: 700;
+}
+
+.header__menu, .header__motto {
+  font-size: 2rem;
 }
 
 .red {
@@ -167,9 +178,9 @@ body {
 
 .header__nko {
   font-family: Verdana;
-  font-size: 32px;
+  font-size: 1.5rem;
   color: white;
-  padding-left: 16%;
+  padding-left: 1.5rem;
 }
 
 .header__socials {
@@ -183,32 +194,34 @@ body {
 
 .socials-icon {
   fill: white;
-  height: 50px;
-  width: 50px;
-  margin-right: 20px;
+  height: 2rem;
+  width: 2rem;
 }
 
 .vk {
-  height: 70px;
-  width: 70px;
+  height: 3rem;
+  width: 3rem;
 }
 
 .menu__nav {
   display: flex;
   font-family: 'Comic Sans MS';
   align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
-  font-size: 24px;
+  font-size: 1rem;
   color: #0f7000;
   font-weight: 550;
   background-color: #fffeeb;
   margin-bottom: 0;
+  width: 100%;
 }
 
 .nav__link {
   text-decoration: none;
   color: #0f7000;
+}
+
+.nav__item:hover {
+  text-decoration: underline;
 }
 
 .nav__link:hover {
@@ -223,24 +236,25 @@ body {
 .nav__list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
 .nav__item {
-  margin-right: 5%;
   display: inline-block;
+  text-align: center;
 }
 
 .article__title {
-  text-align: center;
   font-family: 'Comic Sans MS';
-  font-size: 36px;
+  font-size: 1.5rem;
+  line-height: 5rem;
+  text-align: center;
   color: #fffeeb;
-  background-color: #0f7000;  
-  margin-top: 0;
+  background-color: #0f7000;
+  margin: 0 auto;
   border: 1px solid #0f7000;
-  height: 100px;
+  height: 5rem;
 }
 
 .page__article {
@@ -248,16 +262,22 @@ body {
 }
 
 .welcome__article {
-  font-family: 'Comic Sans MS';
-  font-size: 32px;
+  font-family: 'Verdana';
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 5%;
   width: 90vw;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
-@media (max-width: 760px) {
+.welcome__article:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  border-radius: 1rem;
+}
+
+@media (max-width: 960px) {
   .welcome__article {
     flex-direction: column;
   }
@@ -265,8 +285,8 @@ body {
 
 .carousel-wrapper {
   position: relative;
-  width: 600px;
-  height: 350px;
+  width: 25rem;
+  height: 17rem;
   margin-left: 2%;
   margin-right: 2%;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
@@ -296,7 +316,7 @@ body {
   top: 50%;
   transform: translateY(-50%) rotate(135deg);
 }
- 
+
 .arrow-next {
   right: -30px;
   position: absolute;
@@ -538,26 +558,37 @@ body {
   padding-left: 5%;
   padding-right: 5%;
   text-align: center;
-  max-width: 40%;
-  font-size: 18px;
+  width: 40%;
+  font-size: 1.1rem;
 }
 
 .welcome__text-bigger {
-  font-size: 30px;
-  margin-bottom: 20%;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 960px) {
+  .welcome__text {
+    width: 100%;
+  }
 }
 
 .welcome__speech {
   display: flex;
   justify-content: space-between;
-  margin-top: 2%;
-  margin-bottom: 3%;
+  margin: 2% auto;
   padding: 2%;
   background: #fffeeb;
   border: 2px solid #f7f5bc;
   border-radius: 20px;
-  font-size: 22px;
+  font-size: 1rem;
   font-family: Verdana;
+}
+
+@media (max-width: 960px) {
+  .welcome__speech {
+    flex-direction: column;
+  }
 }
 
 .welcome__photo-block {
@@ -575,41 +606,45 @@ body {
   height: 300px;
   width: 300px;
   border-radius: 200px;
+  margin: 0 auto;
 }
 
 .speech__text {
-  text-indent: 40px;
+  text-indent: 4rem;
+  font-size: 1.4rem;
+  font-family: Verdana;
 }
 
 .welcome__title {
   font-family: Verdana;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
   font-weight: 700;
+  margin: 10px auto;
 }
 
 .welcome__title-fio {
   font-family: Verdana;
-  font-size: 18px;
+  font-size: 1.2rem;
+  margin: 0 auto;
 }
 
 .advantage__block {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
   background-image: url('https://github.com/annmartyn/perspective/blob/main/img/noita-digital-MdmcpX2ofRk-unsplash.jpg?raw=true');
   background-size: cover;
-  height: 70vh;
 }
 
 .advantage__card {
-  width: 22%;
-  margin-right: 2%;
+  width: 25%;
+  box-sizing: border-box;
 }
 
 .advantage__card-text {
   font-family: 'Comic Sans MS';
-  font-size: 24px;
+  font-size: 1.2rem;
+  margin-left: 1rem;
   color: white;
 }
 
@@ -630,11 +665,21 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+.contacts__map > iframe {
+  width: 560px;
+  height: 400px;
+}
+
 .contacts__info {
   font-family: Verdana;
   text-align: center;
-  font-size: 24px;
-} 
+  font-size: 1.2rem;
+}
+
+.video__block > iframe {
+  width: 940px;
+  height: 529px;
+}
 
 .license {
   display: block;
@@ -660,12 +705,12 @@ body {
   border-radius: 20px;
 }
 
-@media (min-width: 761px) {
+@media (min-width: 961px) {
   .info__card:nth-child(3n+2) {
     margin-left: 2%;
     margin-right: 2%;
   }
-  
+
   .info__card {
     width: 31%;
     margin-bottom: 2%;
@@ -674,24 +719,95 @@ body {
   .info__card:nth-child(16) {
     width: 97%;
   }
-  
+
   .article__info {
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 3%;
   }
+  
+  .advantage__card:nth-child(n+2) {
+    border-left: 4px dashed white;
+  }
+  
+  .advantage__card:nth-child(n) {
+    border-bottom: 4px dashed white;
+  }
+  
+  .advantage__card:nth-child(n+5) {
+    border-bottom: none;
+  }
+  
+  .advantage__card:nth-child(5) {
+    border-left: none;
+  }  
+
+  h4.info__card-header {
+    font-size: 21px;
+  }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
+  .welcome__photo-block {
+    width: 100%;
+  }
+  
+  .welcome__photo-block::after {
+    content: "";
+    display: block;
+    background-color: #f7f5bc;
+    height: 6px;
+    width: 111px;
+    margin: 10px auto;
+  }
+  
+  .video__block > iframe {
+    width: 310px;
+    height: 140px;
+  }
+ 
+  .advantage__card {
+    width: 48%;
+  }
+  
   .info__card {
     width: 60%;
     margin-bottom: 2%;
   }
-  
-    .article__info {
+
+  .article__info {
     padding-left: 18%;
     padding-right: 18%;
     padding-top: 3%;
+  }
+  
+  .advantage__card:nth-child(2n) {
+    border-left: 2px dashed white;
+  }
+  
+  .advantage__card:nth-child(n) {
+    border-bottom: 2px dashed white;
+  }
+  
+  .advantage__card:nth-child(n+7) {
+    border-bottom: none;
+  }
+  
+  .license {
+    width: 90%;
+  }
+  
+  .contacts {
+    flex-direction: column;
+  }
+  
+  .contacts__map {
+    margin-bottom: 15px;
+  }
+  
+  .contacts__map > iframe {
+    width: 280px;
+    height: 200px;
   }
 }
 
@@ -845,7 +961,7 @@ body {
     .go_back {
         font-size: 20px !important;
     }
-} 
+}
 
 .icon-bottom {
   fill: black;
@@ -886,6 +1002,12 @@ body {
   opacity: 1;
   background: url('https://github.com/annmartyn/perspective/blob/main/img/28.jpg?raw=true');
   background-size: cover;
+}
+
+.video__block {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 *:target ~ .item-28 {
